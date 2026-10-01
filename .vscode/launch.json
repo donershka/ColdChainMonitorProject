@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run ColdChainMonitor",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/ColdChainMonitor/bin/Debug/net8.0/ColdChainMonitor.dll",
+      "args": [
+        "${workspaceFolder}/ColdChainMonitor/readings.txt",
+        "${workspaceFolder}/ColdChainMonitor/archive.json"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Run all automated tests",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/ColdChainMonitor.Tests/bin/Debug/net8.0/ColdChainMonitor.Tests.dll",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}
